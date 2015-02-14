@@ -9,6 +9,9 @@ char st_text[100];
 char access = 0;
 printf("Welcome to the CIA. Enter a command to get started.\n> ");
 
+
+while(TRUE){
+
 scanf("%6s %100s", st_arg, st_text);
 
 switch(st_arg[0]){
@@ -54,8 +57,8 @@ switch(st_arg[0]){
   
     
     default : 
-       printf("Invalid command");
+       printf("Invalid command\n> ");
        
-
+}
 }
 }
