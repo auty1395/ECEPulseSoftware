@@ -16,7 +16,7 @@ bool add_pass_to_buf(char *);
 bool remove_pass_from_buf(char *);
 bool pass_exists_in_file(char *);
 
-void encrypt(char *);
+int encrypt(char *, char*);
 int ADD(char *);
 int DELETE(char *);
 int PASS(char *);
