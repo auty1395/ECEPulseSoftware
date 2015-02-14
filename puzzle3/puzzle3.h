@@ -21,7 +21,7 @@ int encrypt(char *, char*);
 int ADD(char *);
 int DELETE(char *);
 int PASS(char *);
-
+char lower(char);
 
 
 #endif
