@@ -11,7 +11,9 @@ printf("Welcome to the CIA. Enter a command to get started.\n> ");
 
 scanf("%6s %100s", st_arg, st_text);
 
-switch(st_arg[0]){
+  while (1)
+  {
+    switch(st_arg[0]){
 
 	//Pass should take the input and check for a match 
 	//return 1 and print "Access Granted" on success
@@ -57,5 +59,6 @@ switch(st_arg[0]){
        printf("Invalid command");
        
 
-}
+    }
+  }
 }
