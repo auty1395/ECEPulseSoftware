@@ -1,3 +1,5 @@
+#include "puzzle3.h"
+
 int PASS(char * st_text)
 {
 		char hash[HASH_LENGTH];

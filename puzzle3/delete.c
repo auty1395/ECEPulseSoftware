@@ -1,3 +1,5 @@
+#include "puzzle3.h"
+
 int DELETE(char * st_text){
 		char hash[HASH_LENGTH];
     encrypt(st_text, hash);

@@ -3,7 +3,7 @@
 bool add_pass_to_file(char *str)
 {
     static char file[] = "passwords.txt";
-
+		char newline = '\n';
     FILE *fp = fopen(file, "a");
     int len = strlen(str);
 
@@ -14,7 +14,7 @@ bool add_pass_to_file(char *str)
     }
 
     fwrite(str, len, 1, fp);
-    fwrite('\n', 1, 1, fp);
+    fwrite(&newline, 1, 1, fp);
     fclose(fp);
     return TRUE;
 
@@ -24,6 +24,7 @@ bool remove_pass_from_file(char *str)
 {
     static char file[] = "passwords.txt";
     static char file2[] = "~passwords.txt";
+		char newline = '\n';
 
     FILE *fp = fopen(file, "r"), *fpnew = fopen(file, "w");
     char buf[50], temp;
@@ -47,8 +48,8 @@ bool remove_pass_from_file(char *str)
         }
         else
         {
-            fwrite(temp, i, 1, fpnew);
-            fwrite('\n', 1, 1, fpnew);
+            fwrite(buf, i, 1, fpnew);
+            fwrite(&newline, 1, 1, fpnew);
         }
     }
     remove(file);
@@ -63,6 +64,7 @@ bool remove_pass_from_file(char *str)
 bool pass_exists_in_file(char *str)
 {
 	static char file[] = "passwords.txt";
+	char newline = '\n';
 	FILE *fp;
 	char buffer[110];
 	int i;
@@ -79,7 +81,7 @@ bool pass_exists_in_file(char *str)
 			buffer[i] = temp;
 		}
 
-		if(!strcmp(buf, str)) {
+		if(!strcmp(buffer, str)) {
 			fclose(fp);
 			return TRUE;
 		}
