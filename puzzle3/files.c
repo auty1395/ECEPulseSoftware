@@ -82,7 +82,7 @@ bool pass_exists_in_file(char *str)
 					
 			buffer[i] = temp;
 		}
-        buffer[++i] = '\0';
+        buffer[i] = '\0';
 
 		if(!strcmp(buffer, str)) {
 			fclose(fp);
