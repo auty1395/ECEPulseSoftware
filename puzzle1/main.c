@@ -6,7 +6,7 @@ int main(){
 char st_arg[6];
 char st_text[50];
 char access = 0;
-printf("Welcome to CIA. Enter a command to get started.\n> ");
+printf("Welcome to the CIA. Enter a command to get started.\n> ");
 
 scanf("%6s %50s", st_arg, st_text);
 
