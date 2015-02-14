@@ -51,7 +51,7 @@ switch(st_arg[0]){
        
        break;  
   
-    /* you can have any number of case statements */
+    
     default : 
        printf("Invalid command");
        
