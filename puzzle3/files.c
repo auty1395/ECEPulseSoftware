@@ -41,6 +41,7 @@ bool remove_pass_from_file(char *str)
     {
         for (i = 0; '\n' != (temp = fgetc(fp)); i++)
         {
+            if (temp == EOF) return FALSE;
             buf[i] = temp;
         }
         buf[i] = '\0';
@@ -79,7 +80,7 @@ bool pass_exists_in_file(char *str)
 	while(!feof(fp)){
 
 		for (i = 0; '\n' != (temp = fgetc(fp)); i++){
-					
+			if (temp == EOF) return FALSE;
 			buffer[i] = temp;
 		}
         buffer[i] = '\0';
