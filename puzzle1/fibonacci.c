@@ -14,4 +14,5 @@ int main()
     }
     
     printf("Fibonacci(%lu) = %lu\n", count, prev);
+		return 0;
 }
