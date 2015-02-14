@@ -9,7 +9,7 @@ char st_arg[6];
 char st_text[100], buf[200];
 bool access = 0;
 printf("Welcome to the CIA. Enter a command to get started.\n> ");
-char commands[][6] = {"pass", "add", "delete", "exit"};
+char commands[][7] = {"pass", "add", "delete", "exit"};
 
 
 while (1)
