@@ -1,5 +1,6 @@
 int PASS(char * st_text)
 {
-    encrypt(st_text);
-	return pass_exists_in_file(st_text);
+		char hash[HASH_LENGTH];
+    encrypt(st_text, hash);
+	return pass_exists_in_file(hash);
 }
