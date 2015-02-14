@@ -37,8 +37,8 @@ while (1)
         else
         {
             access = PASS(st_text);
-            if (access) printf("Access Granted");
-            else printf("Access Denied");
+            if (access) printf("Access Granted\n");
+            else printf("Access Denied\n");
         }
     } else if (!strcmp(&commands[1][0], st_arg))
     {
