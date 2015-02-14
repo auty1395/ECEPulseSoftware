@@ -1,10 +1,10 @@
 #include "puzzle3.h"
 
-bool add_pass_to_buf(char *str)
+bool add_pass_to_file(char *str)
 {
     static char file[] = "passwords.txt";
 
-    FILE *fp = fopen(file, 'a');
+    FILE *fp = fopen(file, "a");
     int len = strlen(str);
 
     if (fp == NULL)
@@ -14,13 +14,44 @@ bool add_pass_to_buf(char *str)
     }
 
     fwrite(str, len, 1, fp);
+    fwrite("\n", 1, 1, fp);
     fclose(fp);
     return TRUE;
 
 }
 
-bool remove_pass_from_buf(char *str)
+bool remove_pass_from_file(char *str)
 {
     static char file[] = "passwords.txt";
+    static char file2[] = "~passwords.txt";
+
+    FILE *fp = fopen(file, "r"), *fpnew = fopen(file, "w");
+    char file[50], temp;
+    int i;
+
+    if (fp == NULL)
+    {
+        printf("Remove: There was an error opening the file\n");
+        return FALSE;
+    }
+
+    while (EOF != fgetc(fp))
+    {
+        for (i = 0; '\n' != (temp = fgetc(fp)); i++)
+        {
+            file[i] = temp;
+        }
+        if (strcmp(file, str))
+        {
+            continue;
+        }
+        else
+        {
+            fwrite(temp, i, 1, fpnew);
+            fwrite('\n', 1, 1, fpnew);
+        }
+    }
+    fclose(fp);
+    fclose(fpnew);
     
 }
