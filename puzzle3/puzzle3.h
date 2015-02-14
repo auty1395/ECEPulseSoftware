@@ -1,0 +1,24 @@
+#ifndef _PUZZLE3_H_
+#define _PUZZLE3_H_
+
+#include <math.h>
+#include <stdio.h>
+#include <openssl/md5.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+typedef unsigned char bool;
+
+bool add_pass_to_buf(char *);
+bool remove_pass_from_buf(char *);
+bool pass_exists_in_file(char *);
+
+void encrypt(char *)
+int ADD(char *);
+int DELETE(char *);
+int PASS(char *);
+
+
+
+#endif
