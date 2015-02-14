@@ -26,7 +26,7 @@ bool remove_pass_from_file(char *str)
     static char file2[] = "~passwords.txt";
 
     FILE *fp = fopen(file, "r"), *fpnew = fopen(file, "w");
-    char file[50], temp;
+    char buf[50], temp;
     int i;
 
     if (fp == NULL)
@@ -35,13 +35,13 @@ bool remove_pass_from_file(char *str)
         return FALSE;
     }
 
-    while (EOF != fgetc(fp))
+    while (!feof(fp))
     {
         for (i = 0; '\n' != (temp = fgetc(fp)); i++)
         {
-            file[i] = temp;
+            buf[i] = temp;
         }
-        if (strcmp(file, str))
+        if (!strcmp(buf, str))
         {
             continue;
         }
@@ -56,4 +56,38 @@ bool remove_pass_from_file(char *str)
     fclose(fp);
     fclose(fpnew);
     
+
 }
+
+
+bool pass_exists_in_file(char *str)
+{
+	static char file[] = "passwords.txt";
+	FILE *fp;
+	char buffer[110];
+	int i;
+	char temp;
+	
+	if((fp = fopen(file, "r")) == NULL) {
+		return FALSE;
+	}
+
+	while(!feof(fp)){
+
+		for (i = 0; '\n' != (temp = fgetc(fp)); i++){
+					
+			buffer[i] = temp;
+		}
+
+		if(!strcmp(buf, str)) {
+			fclose(fp);
+			return TRUE;
+		}
+
+	}
+	fclose(fp);
+	return FALSE;
+	
+	
+}
+
