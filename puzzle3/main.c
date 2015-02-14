@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include "main.h"
-#include "pass.h"
-#include "add.h"
-#include "delete.h"
+#include "puzzle3.h"
+
 
 int main(){
 
