@@ -14,7 +14,7 @@ bool add_pass_to_file(char *str)
     }
 
     fwrite(str, len, 1, fp);
-    fwrite("\n", 1, 1, fp);
+    fwrite('\n', 1, 1, fp);
     fclose(fp);
     return TRUE;
 
@@ -51,6 +51,8 @@ bool remove_pass_from_file(char *str)
             fwrite('\n', 1, 1, fpnew);
         }
     }
+    remove(file);
+    rename(file, file2);
     fclose(fp);
     fclose(fpnew);
     
