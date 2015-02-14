@@ -43,6 +43,7 @@ bool remove_pass_from_file(char *str)
         {
             buf[i] = temp;
         }
+        buf[++i] = '\0';
         if (!strcmp(buf, str))
         {
             continue;
@@ -81,6 +82,7 @@ bool pass_exists_in_file(char *str)
 					
 			buffer[i] = temp;
 		}
+        buffer[++i] = '\0';
 
 		if(!strcmp(buffer, str)) {
 			fclose(fp);
