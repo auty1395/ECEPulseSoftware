@@ -5,7 +5,7 @@ int main (int argc, char ** argv)
 {
 	unsigned long fib = 0;
 	unsigned long sum = 0;
-	int i;
+	int i, p, r;
 
 	//get the fib number from stdin
 	printf("Enter the number: ");
@@ -15,18 +15,25 @@ int main (int argc, char ** argv)
 	//divide by 10^7 and floor
 	fib = fib/10000000l;
 	
-	//sum the 5's
-	for(i=0; i <= fib; i+= 5)
+	//set p and r
+	p = fib/15;
+	r = fib%15;
+
+	//sum all the 3's and 5's from 0 to 15*p
+	sum = 60*p + 105*(p-1)*p / 2;
+
+	//sum all the remaining 3's and 5's from
+	//15*p to fib
+	for(i=(p*15)+3; i<=fib; i+=3)
 	{
 		sum += i;
 	}
-
-	//sum the 3's
-	for(i=0; i<=fib; i+=3)
+	for(i=(p*15)+5; i<=fib; i+= 5)
 	{
-		if(i%5 != 0) 		// if it's divisible by 5, we've already summed it
-			sum += i;
+		if(i%3 != 0) sum += i;
 	}
+	
+
 
 	printf("The sum is %lu.\n", sum);
 
