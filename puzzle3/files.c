@@ -72,7 +72,7 @@ bool pass_exists_in_file(char *str)
 		return FALSE;
 	}
 
-	while( !feof(fp)){
+	while(!feof(fp)){
 
 		for (i = 0; '\n' != (temp = fgetc(fp)); i++){
 					
