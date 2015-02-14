@@ -1,4 +1,4 @@
-#include "files.h"
+#include "puzzle3.h"
 
 bool add_pass_to_buf(char *str)
 {
