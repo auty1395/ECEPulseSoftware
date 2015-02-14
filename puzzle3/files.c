@@ -35,7 +35,7 @@ bool remove_pass_from_file(char *str)
         return FALSE;
     }
 
-    while (EOF != fgetc(fp))
+    while (!feof(fp))
     {
         for (i = 0; '\n' != (temp = fgetc(fp)); i++)
         {
