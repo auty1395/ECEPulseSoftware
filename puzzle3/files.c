@@ -18,3 +18,9 @@ bool add_pass_to_buf(char *str)
     return TRUE;
 
 }
+
+bool remove_pass_from_buf(char *str)
+{
+    static char file[] = "passwords.txt";
+    
+}
