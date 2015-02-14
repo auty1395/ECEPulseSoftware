@@ -3,10 +3,10 @@
 
 #include <math.h>
 #include <stdio.h>
+#include <openssl/md5.h>
 #include <string.h>
+#include <stdlib.h>
 
-char * encrypt(char *);
-char * decrypt(char *);
-
+void encrypt(char *);
 
 #endif

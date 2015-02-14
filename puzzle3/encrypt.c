@@ -1,25 +1,21 @@
 #include "encrypt.h"
 
-char *encrpyt(char *str)
+void encrypt(char *str)
 {
-    char key[] = "+~:g)34#8@3jW3W";
-    printf("%s", str);
-    return 0;
-    int len = strlen(str);
+    unsigned char c[MD5_DIGEST_LENGTH];
+    MD5_CTX context;
+    MD5_Init(&context);
 
-    int keylen = strlen(key);
-    for (int i = 0, j = 0; i < len; i++, j++)
+    int size = strlen(str);
+    char * newstr = malloc(size);
+
+    strcpy(newstr, str);
+
+    MD5_Update(&context, newstr, size);
+    MD5_Final(c, &context);
+
+    for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
     {
-        if (j > keylen) j = 0;
-        printf("%c", key[j]);
-        break;
-        str[i] += key[j];
+        printf("%02x", c[i]);
     }
-
-    return str;
-}
-
-char *decrypt(char *str)
-{
-
 }
