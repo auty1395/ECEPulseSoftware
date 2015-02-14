@@ -12,8 +12,8 @@
 
 typedef unsigned char bool;
 
-bool add_pass_to_buf(char *);
-bool remove_pass_from_buf(char *);
+bool add_pass_to_file(char *);
+bool remove_pass_from_file(char *);
 bool pass_exists_in_file(char *);
 
 void encrypt(char *);
