@@ -10,7 +10,8 @@ int main()
         temp = prev;
         prev = curr;
         curr = temp + curr;
+        count++;
     }
-
-    printf("%lu\n", prev);
+    
+    printf("Fibonacci(%lu) = %lu\n", count, prev);
 }
