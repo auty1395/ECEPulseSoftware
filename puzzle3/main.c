@@ -14,6 +14,7 @@ char commands[][6] = {"pass", "add", "delete", "exit"};
 
 while (1)
 {  
+    
     if (NULL == fgets(buf, 200, stdin))
     {
         printf("Invalid Command\n >");
@@ -61,7 +62,11 @@ while (1)
     {
         access = 0;
         printf("You have been logged out.\n> ");
+    } else
+    {
+        printf("Invalid Command. \n> ");
     }
+    printf("Enter another command \n>");
 
   	//Pass should take the input and check for a match 
   	//return 1 and print "Access Granted" on success
