@@ -26,7 +26,7 @@ bool remove_pass_from_file(char *str)
     static char file2[] = "~passwords.txt";
 
     FILE *fp = fopen(file, "r"), *fpnew = fopen(file, "w");
-    char file[50], temp;
+    char buf[50], temp;
     int i;
 
     if (fp == NULL)
@@ -39,9 +39,9 @@ bool remove_pass_from_file(char *str)
     {
         for (i = 0; '\n' != (temp = fgetc(fp)); i++)
         {
-            file[i] = temp;
+            buf[i] = temp;
         }
-        if (strcmp(file, str))
+        if (strcmp(buf, str))
         {
             continue;
         }
