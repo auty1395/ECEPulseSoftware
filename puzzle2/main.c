@@ -3,13 +3,13 @@
 
 int main (char ** argv, int argc)
 {
-	unsigned long fib = 0;
-	unsigned long sum = 0;
+	unsigned long long fib = 0;
+	unsigned long long sum = 0;
 	int i, p, r;
 
 	//get the fib number from stdin
 	printf("Enter the number: ");
-	scanf("%lu", &fib);
+	scanf("%llu", &fib);
 //	printf("%lu", fib);
 
 	//divide by 10^7 and floor
@@ -35,7 +35,7 @@ int main (char ** argv, int argc)
 	
 
 
-	printf("The sum is %lu.\n", sum);
+	printf("The sum is %llu.\n", sum);
 
 	return 0;
 }
