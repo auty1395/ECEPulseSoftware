@@ -2,8 +2,9 @@
 #include "puzzle3.h"
 
 
-int main(){
-
+int main(int argc, char** argv)
+{
+int i;
 char st_arg[6];
 char st_text[100], buf[200];
 bool access = 0;
@@ -21,7 +22,7 @@ while (1)
 
     sscanf(buf, "%s %[^\n]s", st_arg, st_text);
 
-    for (int i = 0; i < strlen(st_arg); i++)
+    for (i = 0; i < strlen(st_arg); i++)
     {
         st_arg[i] = (char) lower(st_arg[i]);
     }
@@ -67,6 +68,7 @@ while (1)
   	//return 0 and print "Access Denied" on fail 
     
     }
+		return 0;
 }
 
 char lower(char c)

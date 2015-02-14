@@ -66,7 +66,6 @@ bool remove_pass_from_file(char *str)
 bool pass_exists_in_file(char *str)
 {
 	static char file[] = "passwords.txt";
-	char newline = '\n';
 	FILE *fp;
 	char buffer[110];
 	int i;
