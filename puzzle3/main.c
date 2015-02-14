@@ -37,6 +37,8 @@ while (1)
         else
         {
             access = PASS(st_text);
+            if (access) printf("Access Granted");
+            else printf("Access Denied");
         }
     } else if (!strcmp(&commands[1][0], st_arg))
     {
@@ -63,9 +65,9 @@ while (1)
         printf("You have been logged out.\n> ");
     } else
     {
-        printf("Invalid Command. \n> ");
+        printf("Invalid Command. ");
     }
-    printf("Enter another command \n>");
+    printf("Enter another command \n> ");
 
   	//Pass should take the input and check for a match 
   	//return 1 and print "Access Granted" on success
