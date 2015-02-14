@@ -9,13 +9,14 @@ bool add_pass_to_file(char *str)
 
     if (fp == NULL)
     {
-        printf("Add: There was an error opening the file\n");
+        printf("Add: There was an error opening the file.\n> ");
         return FALSE;
     }
 
     fwrite(str, len, 1, fp);
     fwrite(&newline, 1, 1, fp);
     fclose(fp);
+    printf("Add: Password has been added.\n> ");
     return TRUE;
 
 }
@@ -32,7 +33,7 @@ bool remove_pass_from_file(char *str)
 
     if (fp == NULL)
     {
-        printf("Remove: There was an error opening the file\n");
+        printf("Remove: There was an error opening the file.\n> ");
         return FALSE;
     }
 
@@ -56,7 +57,8 @@ bool remove_pass_from_file(char *str)
     rename(file, file2);
     fclose(fp);
     fclose(fpnew);
-    
+    printf("Remove: The password has been removed.\n> ");
+    return TRUE;    
 
 }
 
@@ -83,6 +85,7 @@ bool pass_exists_in_file(char *str)
 
 		if(!strcmp(buffer, str)) {
 			fclose(fp);
+			printf("Access Granted.\n> ");
 			return TRUE;
 		}
 
