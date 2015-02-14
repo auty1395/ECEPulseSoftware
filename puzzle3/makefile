@@ -1,19 +1,18 @@
 CC = gcc
 CFLAGS = -g -Wall 
+CLIBS  = -lcrypto
 TARGET = puzzle3
-OBJS = main.o add.o delete.o pass.o 
+OBJS   = files.o pass.o add.o encrypt.o delete.o 
+
 
 all: $(TARGET)
 
-$(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c
-
-main.o: add.h delete.h pass.h
+$(TARGET): main.c $(OBJS)
+	$(CC) $(CFLAGS) $(CLIBS) -o $(TARGET) $(OBJS) main.c
 
 %.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@
-
+	$(CC) $(CFLAGS) $(CLIBS) -c $< -o $@
 
 clean:
 	rm $(TARGET)
-	rm -f *.o 
+	rm -f *.o
