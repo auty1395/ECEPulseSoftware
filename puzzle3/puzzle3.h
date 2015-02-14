@@ -10,6 +10,7 @@
 #define TRUE 1
 #define FALSE 0
 
+#define HASH_LENGTH  33
 typedef unsigned char bool;
 
 bool add_pass_to_file(char *);
