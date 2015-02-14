@@ -57,7 +57,6 @@ while (1)
             printf("Access Denied.\n> ");
        }
        
-       break; 
     } else if (!strcmp(&commands[3][0], st_arg))
     {
         access = 0;
