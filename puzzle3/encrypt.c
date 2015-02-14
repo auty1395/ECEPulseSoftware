@@ -26,7 +26,7 @@ int encrypt(char* str, char* hash)
 		else
 			*(hash +2*i+1)  = '0' + (temp);
 	}
-	*(hash + 32) = '\n';
+	*(hash + 32) = '\0';
 	return 0;
 }
 
