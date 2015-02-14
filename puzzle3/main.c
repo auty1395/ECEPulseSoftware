@@ -1,17 +1,15 @@
 #include <stdio.h>
-#include "main.h"
-#include "pass.h"
-#include "add.h"
-#include "delete.h"
+#include "puzzle3.h"
+
 
 int main(){
 
 char st_arg[6];
-char st_text[50];
+char st_text[100];
 char access = 0;
 printf("Welcome to the CIA. Enter a command to get started.\n> ");
 
-scanf("%6s %50s", st_arg, st_text);
+scanf("%6s %100s", st_arg, st_text);
 
 switch(st_arg[0]){
 

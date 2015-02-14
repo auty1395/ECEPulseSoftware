@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int main (char ** argv, int argc)
+int main (int argc, char ** argv)
 {
 	unsigned long fib = 0;
 	unsigned long sum = 0;
