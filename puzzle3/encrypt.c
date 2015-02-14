@@ -1,4 +1,4 @@
-#include "encrypt.h"
+#include "puzzle3.h"
 
 void encrypt(char *str)
 {
