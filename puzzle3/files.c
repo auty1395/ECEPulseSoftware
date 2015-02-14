@@ -43,7 +43,7 @@ bool remove_pass_from_file(char *str)
         {
             buf[i] = temp;
         }
-        buf[++i] = '\0';
+        buf[i] = '\0';
         if (!strcmp(buf, str))
         {
             continue;
