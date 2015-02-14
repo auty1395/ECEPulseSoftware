@@ -1,6 +1,4 @@
 int DELETE(char * st_text){
-
-
-
-	return 0;
+    encrypt(st_text);
+	return remove_pass_from_file(st_text);
 }
