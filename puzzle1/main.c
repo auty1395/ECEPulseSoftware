@@ -1,8 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#include "pass.h"
-#include "add.h"
-#include "delete.h"
 
 int main(){
 
@@ -62,3 +59,5 @@ switch(st_arg[0]){
 }
 
 }
+
+
