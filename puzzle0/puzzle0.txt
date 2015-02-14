@@ -1,0 +1,16 @@
+Welcome to the ECE Pulse 2015 Software Competition! This competition will test your skills in Data Structures, Algorithms, Programming Principles, and Security.Overall we hope to push your creative abilities as a Software Developer to the test.
+https://www.youtube.com/watch?v=8To-6VIJZRE
+
+The supported languages for this competition are C, C++, Python, and Java. When you complete a challenge, you must create a run.sh file in that directory that will compile your program and run it.
+
+Each challenge is in a labeled folder, with a .txt file. Try your best to complete as much of the challenge as possible. Your programs will be judged on a point system. You will get zero points for a program that fails to compile. You will get one point for a program that makes a good attempt at the problem. You will get two points for a program that gives a correct answer. You will get three points for a program that gives a corect answer efficiently. You will get four points for a program that beats our solution programs(This will be rare).
+
+There are three tiers in the competition. Tier One is for groups with basic programming experience(CS 125/ECE 220). Tier Two is for groups for intermediate programming experience with knowledge in data structures and algorithms(CS 225/374). Tier Three is for great experience in software development(CS 400 level courses). The courses listed serve as a reference, however your personal experience will place you in a tier. Your group should choose the tier of your most experienced group member.
+
+If you complete all of the challenges, your team will be given the details of an AI competition where you can earn extra points. If you are in tier three, you should very much plan to participate in this.
+
+For your first challenge, write a program that prints the names, netids of your team, and the tier your group is in. This challenge must be completed and accurate, or your group will not be judged.
+
+After you are finished with the competition, zip up the competition directory and email it to mdasgup2@illinois.edu
+
+Good luck!

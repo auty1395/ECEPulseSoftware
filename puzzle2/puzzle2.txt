@@ -1,0 +1,1 @@
+Take the number found in the puzzle 1 and divide it by 10000000000 and floor it. Find the sum of all numbers divisible by 3 or 5 that are less than this number. Your program must run in under a minute.

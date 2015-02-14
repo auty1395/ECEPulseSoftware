@@ -1,0 +1,13 @@
+You are a software developer at your favorite three letter government agency(NSA,FBI,CIA,etc) and you are creating the security protocol for a server with top secret information. You must create a program that stores passkeys, and grant access to those who should have access.
+
+Your program takes input from STDIN in the following forms:
+
+"PASS [text]": Your program should check if [text] is one of the passwords for your server. If it is, print "Access Granted", and allow the user to execute ADD and DELETE commands. If not, print "Access Denied". Your program should allow the password "root" as an accepted password to start.
+
+"ADD [text]": Your program should add [text] as an accepted password, so long as the current user has been granted access.
+
+"DELETE [text]": Your program should remove [text] as an accepted password, so long as the current user has been granted access.
+
+"EXIT": The current user has exited, so ADD and DELETE commands should not be exexecuted until the PASS command is executed with a valid password.
+
+Many hackers will actively work against your protocol. Your program should not store accepted passwords in plaintext(Unless your group is in tier 1). Your program may be attacked and crash, so it would work in your benefit to store passwords in a file instead of a data structure within your program. If you use a file to store passwords, your program will need to load in passwords from your file upon a crash and immediate reboot. 
