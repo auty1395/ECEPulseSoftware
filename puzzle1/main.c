@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 int main(){
 
@@ -48,7 +48,7 @@ switch(st_arg[0]){
 
     case 'E':
        access = 0;
-       
+       printf("You have been logged out.\n> ");
        break;  
   
     
