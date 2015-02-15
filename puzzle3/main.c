@@ -32,7 +32,7 @@ while (1)
     {
         if (access == 1)
         {
-            printf("You alrady have access.\n> ");
+            printf("You alrady have access. ");
         }
         else
         {
