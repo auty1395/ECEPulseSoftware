@@ -1,5 +1,7 @@
-all: testclient testserver
+all: testclient testserver client
 
+client:
+	gcc client.c -o client
 testclient:
 	gcc testclient.c -o testclient
 
