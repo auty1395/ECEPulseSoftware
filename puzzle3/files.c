@@ -27,7 +27,7 @@ bool remove_pass_from_file(char *str)
     static char file2[] = "~passwords.txt";
 		char newline = '\n';
 
-    FILE *fp = fopen(file, "r"), *fpnew = fopen(file, "w");
+    FILE *fp = fopen(file, "r"), *fpnew = fopen(file2, "w");
     char buf[50], temp;
     int i;
 
@@ -41,7 +41,7 @@ bool remove_pass_from_file(char *str)
     {
         for (i = 0; '\n' != (temp = fgetc(fp)); i++)
         {
-            if (temp == EOF) return FALSE;
+            if (temp == EOF) break; 
             buf[i] = temp;
         }
         buf[i] = '\0';
@@ -56,7 +56,7 @@ bool remove_pass_from_file(char *str)
         }
     }
     remove(file);
-    rename(file, file2);
+    rename(file2, file);
     fclose(fp);
     fclose(fpnew);
     printf("Remove: The password has been removed.\n> ");
@@ -87,7 +87,6 @@ bool pass_exists_in_file(char *str)
 
 		if(!strcmp(buffer, str)) {
 			fclose(fp);
-			printf("Access Granted.\n> ");
 			return TRUE;
 		}
 
