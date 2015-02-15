@@ -1,7 +1,8 @@
 #!/bin/python3
 
-number = int(input('Enter the number: '))
-
+#number = int(input('Enter the number: '))
+number = 4660046610375530309
+print('Fibonacci is ', number) 
 number = (number//10000000000)
 
 p = (number//15)
