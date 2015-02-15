@@ -9,4 +9,4 @@ $(TARGET): fibonacci.c
 	$(CC) $(CFLAGS) -o $(TARGET) fibonacci.c
 
 clean:
-	rm $(TARGET)
+	rm -f $(TARGET)

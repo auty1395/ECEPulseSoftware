@@ -14,5 +14,5 @@ $(TARGET): main.c $(OBJS)
 	$(CC) $(CFLAGS) $(CLIBS) -c $< -o $@
 
 clean:
-	rm $(TARGET)
+	rm -f $(TARGET)
 	rm -f *.o
