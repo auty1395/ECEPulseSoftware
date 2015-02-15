@@ -12,7 +12,7 @@ int main (int argc, char ** argv)
 	scanf("%lu", &fib);
 
 	//divide by 10^7 and floor
-	fib = fib/10000000l;
+	fib = fib/10000000000l;
 	
 	//set p and r
 	p = fib/15;
