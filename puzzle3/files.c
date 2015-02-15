@@ -45,7 +45,6 @@ bool remove_pass_from_file(char *str)
             buf[i] = temp;
         }
         buf[i] = '\0';
-        if (buf[0] == '\n') continue;
         if (!strcmp(buf, str))
         {
             continue;
