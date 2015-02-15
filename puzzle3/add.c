@@ -2,9 +2,11 @@
 
 int ADD(char * st_text)
 {
-		char hash[HASH_LENGTH];
+	char hash[HASH_LENGTH];
 
     encrypt(st_text, hash);
-    return add_pass_to_file(hash);
+    if (!pass_exists_in_file(hash)) add_pass_to_file(hash);
+    else printf("Password is already stored.\n> ");
+    return TRUE;
 }
 
