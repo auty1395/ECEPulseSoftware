@@ -53,7 +53,7 @@ while (1)
     } else if (!strcmp(&commands[2][0], st_arg))
     {
         if(access == 1){
-            DELETE(st_text);
+            i = DELETE(st_text);
        }
        else{
             printf("Access Denied.\n> ");

@@ -7,6 +7,6 @@ int main()
     printf("Name: Adam Long            NetID: arlong2\n");
     printf("Name: Adam Auten           NetID: auten2\n");
 
-    printf("\nTier 3\n");
+    printf("\nTier 2\n");
     return 0;
 }

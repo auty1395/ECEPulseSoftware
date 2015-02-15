@@ -7,7 +7,7 @@ bool add_pass_to_file(char *str)
     if (pass_exists_in_file(str))
     {
         printf("Add: The password already exists in the file.\n> ");
-        return false;
+        return FALSE;
     }
     FILE *fp = fopen(file, "a");
     int len = strlen(str);
@@ -34,7 +34,7 @@ bool remove_pass_from_file(char *str)
     if (!pass_exists_in_file(str))
     {
         printf("Remove: The password does not exist in the file.\n> ");
-        return false;
+        return FALSE;
     }
     FILE *fp = fopen(file, "r"), *fpnew = fopen(file2, "w");
     char buf[50], temp;
